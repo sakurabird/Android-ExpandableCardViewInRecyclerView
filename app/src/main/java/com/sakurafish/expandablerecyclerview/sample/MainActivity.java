@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 holder.binding.expandButton.setSelected(false);
                 holder.binding.expandableLayout.expand(true);
             } else {
-                holder.binding.expandButton.setSelected(false);
+                holder.binding.expandButton.setSelected(true);
                 holder.binding.expandableLayout.collapse(true);
             }
 
