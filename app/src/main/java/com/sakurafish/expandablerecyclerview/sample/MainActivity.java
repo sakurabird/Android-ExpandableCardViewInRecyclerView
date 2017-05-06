@@ -1,5 +1,6 @@
 package com.sakurafish.expandablerecyclerview.sample;
 
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.databinding.ObservableArrayList;
@@ -73,6 +74,10 @@ public class MainActivity extends AppCompatActivity {
                         holder.binding.expandButton.setSelected(true);
                         holder.binding.expandableLayout.expand(true);
                     }
+                    ObjectAnimator anim = ObjectAnimator.ofFloat(holder.binding.expandArrow, "rotation", 0, 180);
+                    anim.setDuration(150);
+                    anim.start();
+
                     viewModel.setExpanded(!viewModel.isExpanded());
                 }
             });
